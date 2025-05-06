@@ -1,0 +1,27 @@
+{
+  "name": "nestlib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/nestlib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/nestlib",
+        "tsConfig": "libs/nestlib/tsconfig.lib.json",
+        "packageJson": "libs/nestlib/package.json",
+        "main": "libs/nestlib/src/index.ts",
+        "assets": ["libs/nestlib/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/nestlib/jest.config.ts"
+      }
+    }
+  }
+}

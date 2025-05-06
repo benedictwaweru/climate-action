@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -14,7 +16,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@climate-action/nestlib": ["libs/nestlib/src/index.ts"],
+      "@climate-action/nglib": ["libs/nglib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
